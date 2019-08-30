@@ -98,7 +98,7 @@ static void AddBlackPawnCapMove( const S_Board *pos, const int from, const int t
 	ASSERT(PieceValidEmpty(cap));
 	ASSERT(SqOnBoard(from));
 	ASSERT(SqOnBoard(to));
-//	ASSERT(CheckBoard(pos));
+
 
 	if(RanksBrd[from] == RANK_2) {
 		AddCaptureMove(pos, MOVE(from,to,cap,bQ,0), list);
@@ -294,6 +294,6 @@ void GenerateAllMoves(const S_Board *pos, S_MOVELIST *list) {
 		pce = LoopNonSlidePce[pceIndex++];
 	}
 
-   // ASSERT(MoveListOk(list,pos));
+
 
 }

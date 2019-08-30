@@ -14,7 +14,7 @@ int SqAttacked(const int sq, const int side, const S_Board *pos) {
 	ASSERT(SideValid(side));
 	ASSERT(CheckBoard(pos));
 
-	// pawns
+	// For pawns
 	if(side == WHITE) {
 		if(pos->pieces[sq-11] == wP || pos->pieces[sq-9] == wP) {
 			return TRUE;
@@ -34,13 +34,11 @@ int SqAttacked(const int sq, const int side, const S_Board *pos) {
 		}
 	}
 
-	// rooks, queens
+	// For rooks, queens
 	for(index = 0; index < 4; ++index) {
 		dir = RkDir[index];
 		t_sq = sq + dir;
-		//ASSERT(SqIs120(t_sq));
 		pce = pos->pieces[t_sq];
-//		ASSERT(PceValidEmptyOffbrd(pce));
 		while(pce != OFFBOARD) {
 			if(pce != EMPTY) {
 				if(IsRQ(pce) && PieceCol[pce] == side) {
@@ -58,9 +56,7 @@ int SqAttacked(const int sq, const int side, const S_Board *pos) {
 	for(index = 0; index < 4; ++index) {
 		dir = BiDir[index];
 		t_sq = sq + dir;
-//		ASSERT(SqIs120(t_sq));
 		pce = pos->pieces[t_sq];
-//		ASSERT(PceValidEmptyOffbrd(pce));
 		while(pce != OFFBOARD) {
 			if(pce != EMPTY) {
 				if(IsBQ(pce) && PieceCol[pce] == side) {
@@ -69,15 +65,13 @@ int SqAttacked(const int sq, const int side, const S_Board *pos) {
 				break;
 			}
 			t_sq += dir;
-//			ASSERT(SqIs120(t_sq));
 			pce = pos->pieces[t_sq];
 		}
 	}
 
-	// kings
+	// For kings
 	for(index = 0; index < 8; ++index) {
 		pce = pos->pieces[sq + KiDir[index]];
-//		ASSERT(PceValidEmptyOffbrd(pce));
 		if(pce != OFFBOARD && IsKi(pce) && PieceCol[pce]==side) {
 			return TRUE;
 		}

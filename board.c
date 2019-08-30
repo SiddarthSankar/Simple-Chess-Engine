@@ -91,7 +91,7 @@ void UpdateListsMaterial(S_Board *pos) {
 	for(index = 0; index < Board_sq_nos; ++index) {
 		sq = index;
 		piece = pos->pieces[index];
-		//ASSERT(PceValidEmptyOffbrd(piece));
+
 		if(piece!=OFFBOARD && piece!= EMPTY) {
 			colour = PieceCol[piece];
 
@@ -122,8 +122,7 @@ void UpdateListsMaterial(S_Board *pos) {
 }
 int ParseFen(char *fen, S_Board *pos) {
 
-	//ASSERT(fen!=NULL);
-//	ASSERT(pos!=NULL);
+
 
 	int  rank = RANK_8;
     int  file = FILE_A;

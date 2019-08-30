@@ -90,7 +90,7 @@ typedef struct {
 }S_Board;
 
 
-
+//Global variables
 extern int Sq120to64[Board_sq_nos];
 extern int Sq64to120[64];
 extern U64 SetMask[64];
@@ -132,7 +132,7 @@ extern int RanksBrd[Board_sq_nos];
 #define MFLAGPROM 0xF00000
 
 #define NOMOVE 0
-
+// General MACROS 
 #define SQ64(sq120) Sq120to64[sq120]
 #define SQ120(sq64) Sq64to120[(sq64)]
 #define File2SQ(f,r) ( (21 + (f) ) + ( (r) * 10 ) )
@@ -146,6 +146,7 @@ extern int RanksBrd[Board_sq_nos];
 #define IsKn(p) (PieceKnight[(p)])
 #define IsKi(p) (PieceKing[(p)])
 
+// Functions on all the files 
 extern void InitBitMask();
 extern void InitAll();
 extern void PrintBitBoard(U64 bb);

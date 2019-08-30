@@ -40,21 +40,7 @@ void InitFilesRanksBrd() {
 			FilesBrd[sq] = file;
 			RanksBrd[sq] = rank;
 		}
-	}
-
-/*	printf("FilesBrd\n");
-	for(index = 0; index < Board_sq_nos; ++index) {
-		if(index%10==0 && index!=0) printf("\n");
-		printf("%4d",FilesBrd[index]);
-
-	}
-	printf("\n\nRanksBrd\n");
-	for(index = 0; index < Board_sq_nos; ++index) {
-		if(index%10==0 && index!=0) printf("\n");
-		printf("%4d",RanksBrd[index]);
-
-	}*/
-	
+	}	
 
 }
 
@@ -105,7 +91,6 @@ void InitSq120to64(){
 	for(rank = RANK_1; rank <= RANK_8; ++rank) {
 		for(file = FILE_A; file <= FILE_H; ++file) {
 			sq = File2SQ(file,rank);
-			//ASSERT(SqOnBoard(sq));
 			Sq64to120[sq64] = sq;
 			Sq120to64[sq] = sq64;
 			sq64++;
