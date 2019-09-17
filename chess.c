@@ -1,36 +1,42 @@
 #include<stdio.h>
 #include "defs.h"
-
-#define FEN1 "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"
-#define FEN2 "rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR w KQkq c6 0 2"
-#define FEN3 "rnbqkbnr/pp1ppppp/8/2p5/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2"
-#define FEN4 "r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 0 1"
-
+#include <stdlib.h>
 
 
 int main(){
 	//int index = 0;
 	InitAll();
     S_Board board[1];
-    S_MOVELIST list[1];
-
-	int move =0;
-	int MoveNum=0;
+	char input[6];
+	int Move = NOMOVE;
+	printf("\t\t\tINSTRUCTIONS\n");
+	printf("----------------------------------------------------------------\n");
+	printf("----------------------------------------------------------------\n");
+	printf("Consider P as White Pawn and p as Black Pawn\n");
+    printf("Enter the position of for example a2a3 to move\n");
+    printf("Enter q to quit the game\n");
+    printf("Enter t to take back the moves\n");
+    printf("----------------------------------------------------------------\n");
+    printf("----------------------------------------------------------------\n");
 	ParseFen(START_FEN,board);
-	GenerateAllMoves(board,list);
+	while(TRUE){
 	PrintBoard(board);
-	for(MoveNum=0;MoveNum<list->count;++MoveNum){
-		move = list->moves[MoveNum].move;
-		if(!MakeMove(board,move)){
-		continue;}
+	printf("Please enter the move >");
+	fgets(input,6,stdin);
 
-		printf("\nMADE:%s\n",PrMove(move));
-		PrintBoard(board);
-		TakeMove(board);
-		printf("\nTAKE:%s\n",PrMove(move));
-		PrintBoard(board);
-		getchar();
+	if(input[0]=='q'){
+	break;
+	}else if(input[0]=='t'){
+	TakeMove(board);
+	}else{
+		Move= ParseMove(input,board);
+		if(Move != NOMOVE){
+			MakeMove(board,Move);
+			}
 	}
+	fflush(stdin);
+	}
+
 
 return(0);
 }

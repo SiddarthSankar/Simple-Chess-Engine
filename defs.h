@@ -168,5 +168,5 @@ extern int PieceValid(const int pce);
 extern void GenerateAllMoves(const S_Board *pos, S_MOVELIST *list);
 extern int MakeMove(S_Board *pos, int move);
 extern void TakeMove(S_Board *pos);
-
+extern int ParseMove(char *ptrChar, S_Board *pos);
 #endif

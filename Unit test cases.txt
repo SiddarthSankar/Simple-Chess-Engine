@@ -1,0 +1,156 @@
+		   Unit test cases
+			INSTRUCTIONS
+----------------------------------------------------------------
+----------------------------------------------------------------
+Consider P as White Pawn and p as Black Pawn
+Enter the position of for example a2a3 to move
+Enter q to quit the game
+Enter t to take back the moves
+----------------------------------------------------------------
+----------------------------------------------------------------
+
+Chess Board:
+
+8    r  n  b  q  k  b  n  r
+7    p  p  p  p  p  p  p  p
+6    .  .  .  .  .  .  .  .
+5    .  .  .  .  .  .  .  .
+4    .  .  .  .  .  .  .  .
+3    .  .  .  .  .  .  .  .
+2    P  P  P  P  P  P  P  P
+1    R  N  B  Q  K  B  N  R
+
+     a  b  c  d  e  f  g  h
+side:w
+enPas:99
+castle:KQkq
+PosKey:4c771354dcba3180
+Please enter the move >a2a3
+
+Chess Board:
+
+8    r  n  b  q  k  b  n  r
+7    p  p  p  p  p  p  p  p
+6    .  .  .  .  .  .  .  .
+5    .  .  .  .  .  .  .  .
+4    .  .  .  .  .  .  .  .
+3    P  .  .  .  .  .  .  .
+2    .  P  P  P  P  P  P  P
+1    R  N  B  Q  K  B  N  R
+
+     a  b  c  d  e  f  g  h
+side:b
+enPas:99
+castle:KQkq
+PosKey:72bf2e6f07f8f246
+Please enter the move >a7a6
+
+Chess Board:
+
+8    r  n  b  q  k  b  n  r
+7    .  p  p  p  p  p  p  p
+6    p  .  .  .  .  .  .  .
+5    .  .  .  .  .  .  .  .
+4    .  .  .  .  .  .  .  .
+3    P  .  .  .  .  .  .  .
+2    .  P  P  P  P  P  P  P
+1    R  N  B  Q  K  B  N  R
+
+     a  b  c  d  e  f  g  h
+side:w
+enPas:99
+castle:KQkq
+PosKey:ce0c02c54d52aece
+Please enter the move >b1c3
+
+Chess Board:
+
+8    r  n  b  q  k  b  n  r
+7    .  p  p  p  p  p  p  p
+6    p  .  .  .  .  .  .  .
+5    .  .  .  .  .  .  .  .
+4    .  .  .  .  .  .  .  .
+3    P  .  N  .  .  .  .  .
+2    .  P  P  P  P  P  P  P
+1    R  .  B  Q  K  B  N  R
+
+     a  b  c  d  e  f  g  h
+side:b
+enPas:99
+castle:KQkq
+PosKey:c03e4776db577fe4
+Please enter the move >t
+
+Chess Board:
+
+8    r  n  b  q  k  b  n  r
+7    .  p  p  p  p  p  p  p
+6    p  .  .  .  .  .  .  .
+5    .  .  .  .  .  .  .  .
+4    .  .  .  .  .  .  .  .
+3    P  .  .  .  .  .  .  .
+2    .  P  P  P  P  P  P  P
+1    R  N  B  Q  K  B  N  R
+
+     a  b  c  d  e  f  g  h
+side:w
+enPas:99
+castle:KQkq
+PosKey:ce0c02c54d52aece
+Please enter the move >d2d3
+
+Chess Board:
+
+8    r  n  b  q  k  b  n  r
+7    .  p  p  p  p  p  p  p
+6    p  .  .  .  .  .  .  .
+5    .  .  .  .  .  .  .  .
+4    .  .  .  .  .  .  .  .
+3    P  .  .  P  .  .  .  .
+2    .  P  P  .  P  P  P  P
+1    R  N  B  Q  K  B  N  R
+
+     a  b  c  d  e  f  g  h
+side:b
+enPas:99
+castle:KQkq
+PosKey:c71ba664fa41f701
+Please enter the move >d7d6
+
+Chess Board:
+
+8    r  n  b  q  k  b  n  r
+7    .  p  p  .  p  p  p  p
+6    p  .  .  p  .  .  .  .
+5    .  .  .  .  .  .  .  .
+4    .  .  .  .  .  .  .  .
+3    P  .  .  P  .  .  .  .
+2    .  P  P  .  P  P  P  P
+1    R  N  B  Q  K  B  N  R
+
+     a  b  c  d  e  f  g  h
+side:w
+enPas:99
+castle:KQkq
+PosKey:3c3ca61870533be3
+Please enter the move >c1d2
+
+Chess Board:
+
+8    r  n  b  q  k  b  n  r
+7    .  p  p  .  p  p  p  p
+6    p  .  .  p  .  .  .  .
+5    .  .  .  .  .  .  .  .
+4    .  .  .  .  .  .  .  .
+3    P  .  .  P  .  .  .  .
+2    .  P  P  B  P  P  P  P
+1    R  N  .  Q  K  B  N  R
+
+     a  b  c  d  e  f  g  h
+side:b
+enPas:99
+castle:KQkq
+PosKey:365bf75f1e1e4ee6
+Please enter the move >
+
+
